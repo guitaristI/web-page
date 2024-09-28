@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счетчик</title>
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./img/kitten.svg" alt="Здесь должен быть кот" />
+    <h1>Лайки</h1>
+    <p id="count">0</p>
+    <button id="increment">Хороший</button>
+    <button id="decrement">Плохой</button>
+
+    <script>
+      let count = 0;
+      const countElement = document.getElementById('count');
+      const incrementButton = document.getElementById('increment');
+      const decrementButton = document.getElementById('decrement');
+
+      incrementButton.addEventListener('click', () => {
+        count++;
+        countElement.textContent = count;
+      })
+
+      decrementButton.addEventListener('click', () => {
+        count--;
+        countElement.textContent = count;
+      })
+
+    </script>
+
+  </body>
+</html>
